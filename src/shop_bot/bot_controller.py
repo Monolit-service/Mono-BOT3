@@ -104,6 +104,8 @@ class BotController:
             tonapi_key = database.get_setting("tonapi_key")
             tonconnect_enabled = bool(ton_wallet_address and tonapi_key)
 
+            lavatop_api_key = database.get_setting("lava_api_key")
+
             # Telegram Stars (оплата в звёздах) — включается флагом в настройках
             stars_flag = database.get_setting("stars_enabled")
             stars_enabled = str(stars_flag).lower() in ("true", "1", "yes", "on")
@@ -123,6 +125,7 @@ class BotController:
                 "tonconnect": tonconnect_enabled,
                 "stars": stars_enabled,
                 "yoomoney": yoomoney_enabled,
+                "lavatop": lavatop_enabled,
             }
             handlers.TELEGRAM_BOT_USERNAME = bot_username
             handlers.ADMIN_ID = admin_id
