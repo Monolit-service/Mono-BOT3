@@ -4,7 +4,7 @@ import logging
 from yookassa import Configuration
 from aiogram import Bot, Dispatcher, Router
 from aiogram.client.default import DefaultBotProperties
-from aiogram.enums import ParseMode 
+from aiogram.enums import ParseMode
 
 from shop_bot.data_manager import database
 from shop_bot.bot.handlers import get_user_router
